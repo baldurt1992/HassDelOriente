@@ -30,10 +30,6 @@ coverage/
 # Bower dependency directory (https://bower.io/)
 bower_components/
 
-# Compiled source
-dist/
-build/
-
 # Misc
 .DS_Store
 .env
@@ -67,9 +63,6 @@ $RECYCLE.BIN/
 # Package lock files
 package-lock.json
 yarn.lock
-
-# Compiled Tailwind CSS file
-public/css/tailwind.css
 
 # Files for temporary use
 .tmp/
