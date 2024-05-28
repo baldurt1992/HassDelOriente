@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/public/css/tailwind.css" />
+  <link rel="stylesheet" href="/public/css/custom.css" />
+  <title>Inicio de sesión</title>
+</head>
+
+<body class="w-full h-screen bg-transparent text-primary flex flex-col">
+  <div class="bg-center bg-fixed h-screen flex items-center justify-center bg-no-repeat"
+    style="background-image: url('/src/assets/background_login.jpg')">
+    
+    <!-- Register form part 1 -->
+
+    <div id="register-form"
+      class=" form-container flex flex-col lg:flex-row justify-center w-full h-144 border-2 border-secundary bg-white rounded-lg shadow-lg overflow-hidden max-w-sm lg:max-w-4xl">
+      <div class="hidden lg:block lg:w-1/2 flex-col bg-no-repeat" style="background-image: url('/src/assets/logo.png')">
+      </div>
+      <div class="w-full p-8 lg:w-1/2 flex justify-center flex-col">
+        <div class="flex justify-center items-center">
+          <div class="text-center flex justify-center">
+            <h2 class="text-4xl text-secundary">Iniciar sesión</h2>
+          </div>
+        </div>
+        <form>
+          
+          <div class="mt-4 input-field">
+            <input
+              class="bg-gray-200 text-secundary focus:outline-primary focus:shadow-outline border border-secundary rounded py-2 px-4 block w-full appearance-none"
+              type="email" id="email-login" required />
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="email-login">Correo electrónico</label>
+            <span id="email-login-error" class="text-sm"></span>
+          </div>
+          <div class="mt-4 input-field relative">
+            <input
+              class="bg-gray-200 text-secundary focus:outline-primary focus:shadow-outline border border-secundary rounded py-2 px-4 block w-full appearance-none"
+              type="password" id="password-login" required />
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="password-login">Contraseña</label>
+            <span id="pass-login-error" class="text-sm"></span>
+            <div class="align-right">
+              <a class="text-xs mt-0 transition duration-600 ease-in-out hover:text-secundary" href="#">Recuperar contraseña</a>
+            </div>
+
+          </div>
+          <div class="mt-8">
+            <button id="login-button" type="submit"
+              class="bg-primary text-white font-bold py-2 px-4 w-full rounded transition duration-600 ease-in-out hover:bg-secundary">
+              Iniciar sesión
+            </button>
+          </div>
+          <div class="mt-4 flex items-center justify-between">
+            <span class="border-b border-secundary w-1/5 md:w-1/4"></span>
+              <a id="login-link" href="/public/index.html"
+                class="text-xs font-bold text-primary uppercase transition duration-600 ease-in-out hover:text-secundary">Volver al inicio</a>
+            <span class="border-b border-secundary w-1/5 md:w-1/4"></span>
+          </div>
+        </form>
+      </div>
+    </div>
+
+ 
+
+</div>
+<script type="module" src="/src/scripts/LoginScript.js"></script>
+<script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
+</body>
+
+</html>

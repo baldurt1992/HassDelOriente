@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.hidden-form {
+  display: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.custom-border {
+  border-color: #214e0a;
+  height: 45px;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: inherit;
+}
+
+#next-button:enabled:hover {
+  background-color: #214e0a;
+}
+
+#next-button:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.input-field {
+  position: relative;
+}
+
+.input-field input {
+  padding: 15px 15px 15px 15px;
+  background: transparent;
+  outline: none;
+  height: 45px;
+}
+
+.input-field label {
+  position: absolute;
+  top: 24px;
+  left: 15px;
+  transform: translateY(-50%);
+  transition: 0.3s;
+  background: #ffffff;
+  padding: 0 5px;
+  pointer-events: none;
+}
+
+input:focus {
+  border: 2px solid #629c44;
+}
+
+input:focus~label,
+input:valid~label {
+  top: 0;
+  font-size: 12px;
+  background: #ffffff;
+  padding: 0 5px;
+  transform: translateY(-50%);
+}
+
+.show-modal {
+  display: block;
+}
+
+.align-right {
+  display: flex;
+  justify-content: end;
+}
+
+#pass-login-error {
+  display: inline-block;
+  width: 100%;
+}
+
+#email-login-error {
+  display: inline-block;
+  width: 100%;
+}
+
+#address-error {
+  display: inline-block;
+  width: 100%;
+}
+
+#pass-error {
+  display: inline-block;
+  width: 100%;
+}
