@@ -31,12 +31,14 @@
               class="bg-gray-200 text-secundary focus:outline-primary focus:shadow-outline border border-secundary rounded py-2 px-4 block w-full appearance-none"
               type="text" id="name-register" required />
             <label class="block text-gray-700 text-sm font-bold mb-2" for="name-register">Nombre</label>
+            <span id="name-error" class="text-sm absolute mt-1 text-red-500" style="display: none;"></span>
           </div>
           <div class="mt-4 input-field">
             <input
               class="bg-gray-200 text-secundary focus:outline-primary focus:shadow-outline border border-secundary rounded py-2 px-4 block w-full appearance-none"
               type="text" id="lastname-register" required />
             <label class="block text-gray-700 text-sm font-bold mb-2" for="lastname-register">Apellido</label>
+            <span id="lastname-error" class="text-sm absolute mt-1 text-red-500" style="display: none;"></span>
           </div>
           <div class="mt-4 input-field">
             <input
@@ -102,11 +104,12 @@
             </select>
           </div>
           <div class="mt-4 input-field">
-            <input
+            <input 
               class="bg-gray-200 text-secundary focus:outline-primary focus:shadow-outline border border-secundary rounded py-2 px-4 block w-full appearance-none"
-              type="number" id="document-number-register" required />
+              type="text" id="document-number-register" required />
             <label class="block text-gray-700 text-sm font-bold mb-2" for="document-number-register">Número de
               documento</label>
+            <span id="document-error" class="text-sm"></span>
           </div>
           <div class="mt-4 input-field">
             <input

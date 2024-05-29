@@ -5,8 +5,6 @@ npm-debug.log*
 # Logs
 logs/
 *.log
-yarn-debug.log*
-yarn-error.log*
 
 # Runtime data
 pids/
@@ -62,7 +60,6 @@ $RECYCLE.BIN/
 
 # Package lock files
 package-lock.json
-yarn.lock
 
 # Files for temporary use
 .tmp/

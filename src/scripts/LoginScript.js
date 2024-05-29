@@ -6,7 +6,6 @@ const passLoginError = document.getElementById("pass-login-error");
 const emailLogin = document.getElementById("email-login");
 const passwordLogin = document.getElementById("password-login");
 
-// Función para limpiar los mensajes de error
 const clearErrors = () => {
   emailLoginError.textContent = "";
   passLoginError.textContent = "";

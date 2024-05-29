@@ -5,12 +5,21 @@ const nextButton = document.getElementById("next-button");
 const LoginLinkCreatePass = document.getElementById("login-link-create-pass");
 const backArrow = document.querySelectorAll(".form-back-arrow");
 const addressRegister = document.getElementById("address-register");
+const documentNumberRegister = document.getElementById(
+  "document-number-register"
+);
+
+const documentError = document.getElementById("document-error");
+const nameRegister = document.getElementById("name-register");
+const lastnameRegister = document.getElementById("lastname-register");
 
 const emailRegex = /^[\w.-]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/;
 const passwordRegex =
   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 const addressRegex =
   /^(Diagonal|Calle|Carrera|diagonal|calle|carrera)\s*\d+\s*[a-zA-Z]*\s*#\s*\d+\s*-\s*\d+\s*[a-zA-Z]*\s*(.*)$/;
+const documentRegex = /^\d+$/;
+const nameLastnameRegex = /^[A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]+$/;
 
 document.addEventListener("DOMContentLoaded", () => {
   backArrow.forEach((svg) => {
@@ -22,7 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  document.addEventListener("DOMContentLoaded", function () {});
   nextButton.addEventListener("click", (e) => {
     e.preventDefault();
     registerForm.classList.add("hidden-form");
@@ -54,7 +62,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function inputValidation(regex, inputId) {
-    if (!regex.test(inputId.value)) {
+    if (inputId.value === "") {
+      inputId.style.borderColor = "";
+      return true;
+    } else if (!regex.test(inputId.value)) {
       inputId.style.borderColor = "red";
       return false;
     } else {
@@ -62,6 +73,69 @@ document.addEventListener("DOMContentLoaded", () => {
       return true;
     }
   }
+
+  function validateNameLastname(input, errorElement) {
+    const isValid = inputValidation(nameLastnameRegex, input);
+    if (!isValid) {
+      errorElement.textContent = "Por favor ingrese solo letras";
+      errorElement.style.color = "red";
+      errorElement.style.display = "block";
+      input.style.color = "red";
+    } else {
+      errorElement.textContent = "";
+      errorElement.style.color = "";
+      input.style.color = "";
+    }
+  }
+
+  nameRegister.addEventListener("keyup", (e) => {
+    validateNameLastname(nameRegister, document.getElementById("name-error"));
+  });
+
+  lastnameRegister.addEventListener("keyup", (e) => {
+    validateNameLastname(
+      lastnameRegister,
+      document.getElementById("lastname-error")
+    );
+  });
+
+  function validatePasswords() {
+    const password = document.getElementById("password-register");
+    const confirmPassword = document.getElementById(
+      "confirm-password-register"
+    );
+    const passError = document.getElementById("pass-error");
+
+    const isPasswordValid = inputValidation(passwordRegex, password);
+
+    if (isPasswordValid) {
+      password.style.color = "";
+    } else {
+      password.style.color = "red";
+    }
+
+    if (password.value === confirmPassword.value && isPasswordValid) {
+      inputValidation(passwordRegex, confirmPassword);
+      password.style.color = "";
+      confirmPassword.style.color = "";
+      passError.textContent = "";
+    } else if (password.value !== confirmPassword.value) {
+      passError.textContent = "Las contraseñas no coinciden";
+      passError.style.color = "red";
+      passError.style.display = "block";
+      confirmPassword.style.color = "red";
+    } else {
+      passError.textContent = "";
+    }
+  }
+
+  const passwordInput = document.getElementById("password-register");
+  const confirmPasswordInput = document.getElementById(
+    "confirm-password-register"
+  );
+
+  passwordInput.addEventListener("input", validatePasswords);
+  confirmPasswordInput.addEventListener("input", validatePasswords);
 
   registerForm.addEventListener("keyup", (e) => {
     if (e.target.tagName === "INPUT") {
@@ -74,57 +148,35 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  registerFormPart2.addEventListener("keyup", (e) => {
-    if (e.target.tagName === "INPUT") {
-      const input = e.target;
-      const inputId = input.id;
-      const passError = document.getElementById("pass-error");
-
-      if (
-        inputId === "password-register" ||
-        inputId === "confirm-password-register"
-      ) {
-        const password = document.getElementById("password-register").value;
-        const confirmPassword = document.getElementById(
-          "confirm-password-register"
-        ).value;
-
-        if (inputId === "password-register") {
-          inputValidation(passwordRegex, input);
-        }
-
-        if (inputId === "confirm-password-register") {
-          if (password === confirmPassword) {
-            input.style.borderColor = "#629C44";
-            passError.textContent = "";
-          } else {
-            input.style.borderColor = "red";
-            passError.textContent = "Las contraseñas no coinciden";
-            passError.style.color = "red";
-            passError.style.display = "block";
-          }
-        }
-      }
+  function validateInput(input, regex, errorElement, errorMessage) {
+    const isValid = inputValidation(regex, input);
+    if (!isValid) {
+      errorElement.textContent = errorMessage;
+      errorElement.style.color = "red";
+      errorElement.style.display = "block";
+      input.style.color = "red";
+    } else {
+      errorElement.textContent = "";
+      errorElement.style.color = "";
+      input.style.color = "";
     }
-  });
+  }
 
   addressRegister.addEventListener("keyup", (e) => {
-    if (e.target.tagName === "INPUT") {
-      const input = e.target;
-      const inputId = input.id;
-      const addressError = document.getElementById("address-error");
+    validateInput(
+      addressRegister,
+      addressRegex,
+      document.getElementById("address-error"),
+      "Formato de dirección incorrecto"
+    );
+  });
 
-      if (inputId === "address-register") {
-        const isValid = inputValidation(addressRegex, input);
-        if (!isValid) {
-          addressError.textContent = "Formato de dirección incorrecto";
-          addressError.style.color = "red";
-          addressError.style.display = "block";
-        } else {
-          addressError.textContent = "";
-          addressError.style.color = "";
-        }
-      }
-    }
+  documentNumberRegister.addEventListener("keyup", (e) => {
+    validateInput(
+      documentNumberRegister,
+      documentRegex,
+      documentError,
+      "Por favor ingresa solo números"
+    );
   });
 });
