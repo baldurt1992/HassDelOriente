@@ -1,152 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/css/tailwind.css" />
+    <link rel="stylesheet" href="/public/css/custom.css" />
+    <title>Registro</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/public/css/tailwind.css" />
-  <link rel="stylesheet" href="/public/css/custom.css" />
-  <title>Registro</title>
-</head>
+  <body class="w-full h-screen bg-transparent text-primary flex flex-col">
+    <div
+      class="bg-center bg-fixed h-screen flex items-center justify-center bg-no-repeat"
+      style="background-image: url('/src/assets/background_login.jpg')"
+    >
+      <!-- Register form part 1 -->
 
-<body class="w-full h-screen bg-transparent text-primary flex flex-col">
-  <div class="bg-center bg-fixed h-screen flex items-center justify-center bg-no-repeat"
-    style="background-image: url('/src/assets/background_login.jpg')">
-
-    <!-- Register form part 1 -->
-
-    <div id="register-form"
-      class=" form-container flex flex-col lg:flex-row justify-center w-full h-144 border-2 border-secundary bg-white rounded-lg shadow-lg overflow-hidden max-w-sm lg:max-w-4xl">
-      <div class="hidden lg:block lg:w-1/2 flex-col bg-no-repeat" style="background-image: url('/src/assets/logo.png')">
-      </div>
-      <div class="w-full p-8 lg:w-1/2 flex justify-center flex-col">
-        <div class="flex justify-center items-center">
-          <div class="text-center flex justify-center">
-            <h2 class="text-4xl text-secundary">Regístrate</h2>
+      <div
+        id="register-form"
+        class="form-container flex flex-col lg:flex-row justify-center w-full h-144 border-2 border-secundary bg-white rounded-lg shadow-lg overflow-hidden max-w-sm lg:max-w-4xl"
+      >
+        <div
+          class="lg:block lg:w-1/2 flex-col bg-no-repeat"
+          style="background-image: url('/src/assets/logo.png')"
+        ></div>
+        <div class="w-full p-8 lg:w-1/2 flex justify-center flex-col">
+          <div class="flex justify-center items-center">
+            <div class="text-center flex justify-center">
+              <h2 class="text-4xl text-secundary">Regístrate</h2>
+            </div>
           </div>
+          <form>
+            <div class="mt-4 input-field">
+              <input
+                class="bg-gray-200 text-secundary focus:outline-primary focus:shadow-outline border border-secundary rounded py-2 px-4 block w-full appearance-none"
+                type="text"
+                id="name-register"
+                required
+              />
+              <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="name-register"
+                >Nombre</label
+              >
+              <span
+                id="name-error"
+                class="text-sm absolute mt-1 text-red-500"
+                style="display: none"
+              ></span>
+            </div>
+            <div class="mt-4 input-field">
+              <input
+                class="bg-gray-200 text-secundary focus:outline-primary focus:shadow-outline border border-secundary rounded py-2 px-4 block w-full appearance-none"
+                type="text"
+                id="lastname-register"
+                required
+              />
+              <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="lastname-register"
+                >Apellido</label
+              >
+              <span
+                id="lastname-error"
+                class="text-sm absolute mt-1 text-red-500"
+                style="display: none"
+              ></span>
+            </div>
+            <div class="mt-4 input-field">
+              <input
+                class="bg-gray-200 text-secundary focus:outline-primary focus:shadow-outline border border-secundary rounded py-2 px-4 block w-full appearance-none"
+                type="email"
+                id="email-register"
+                required
+              />
+              <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="email-register"
+                >Correo electrónico</label
+              >
+            </div>
+            <div class="mt-4 input-field relative">
+              <input
+                class="bg-gray-200 text-secundary focus:outline-primary focus:shadow-outline border border-secundary rounded py-2 px-4 block w-full appearance-none"
+                type="text"
+                id="address-register"
+                required
+              />
+              <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="address-register"
+                >Dirección</label
+              >
+              <span
+                id="address-error"
+                class="text-sm absolute mt-1 text-red-500"
+                style="display: none"
+              ></span>
+            </div>
+            <div class="mt-8">
+              <button
+                id="next-button"
+                type="submit"
+                disabled
+                class="bg-primary text-white font-bold py-2 px-4 w-full rounded transition duration-600 ease-in-out hover:bg-secundary"
+              >
+                Siguiente
+              </button>
+            </div>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="border-b border-secundary w-1/5 md:w-1/4"></span>
+              <a
+                id="login-link-"
+                href="/src/view/LoginView.html"
+                class="text-xs font-bold text-primary uppercase transition duration-600 ease-in-out hover:text-secundary"
+                >Inicia sesión</a
+              >
+              <span class="border-b border-secundary w-1/5 md:w-1/4"></span>
+            </div>
+            <div class="transition-colors duration-600 ease-in-out group-hover">
+              <div class="mt-4 flex items-center justify-center cursor-pointer">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#629C44"
+                  class=""
+                >
+                  <path
+                    d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"
+                  />
+                </svg>
+                <a
+                  id="login-link"
+                  href="/public/index.html"
+                  class="text-xs font-bold text-primary uppercase"
+                >
+                  Volver al inicio
+                </a>
+              </div>
+            </div>
+          </form>
         </div>
-        <form>
-          <div class="mt-4 input-field">
-            <input
-              class="bg-gray-200 text-secundary focus:outline-primary focus:shadow-outline border border-secundary rounded py-2 px-4 block w-full appearance-none"
-              type="text" id="name-register" required />
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="name-register">Nombre</label>
-            <span id="name-error" class="text-sm absolute mt-1 text-red-500" style="display: none;"></span>
-          </div>
-          <div class="mt-4 input-field">
-            <input
-              class="bg-gray-200 text-secundary focus:outline-primary focus:shadow-outline border border-secundary rounded py-2 px-4 block w-full appearance-none"
-              type="text" id="lastname-register" required />
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="lastname-register">Apellido</label>
-            <span id="lastname-error" class="text-sm absolute mt-1 text-red-500" style="display: none;"></span>
-          </div>
-          <div class="mt-4 input-field">
-            <input
-              class="bg-gray-200 text-secundary focus:outline-primary focus:shadow-outline border border-secundary rounded py-2 px-4 block w-full appearance-none"
-              type="email" id="email-register" required />
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="email-register">Correo electrónico</label>
-          </div>
-          <div class="mt-4 input-field relative">
-            <input
-              class="bg-gray-200 text-secundary focus:outline-primary focus:shadow-outline border border-secundary rounded py-2 px-4 block w-full appearance-none"
-              type="text" id="address-register" required />
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="address-register">Dirección</label>
-            <span id="address-error" class="text-sm absolute mt-1 text-red-500" style="display: none;"></span>
-
-          </div>
-          <div class="mt-8">
-            <button id="next-button" type="submit" disabled
-              class="bg-primary text-white font-bold py-2 px-4 w-full rounded transition duration-600 ease-in-out hover:bg-secundary">
-              Siguiente
-            </button>
-          </div>
-          <div class="mt-4 flex items-center justify-between">
-            <span class="border-b border-secundary w-1/5 md:w-1/4"></span>
-            <a id="login-link" href="/src/view/LoginView.html"
-              class="text-xs font-bold text-primary uppercase transition duration-600 ease-in-out hover:text-secundary">Inicia
-              sesión</a>
-            <span class="border-b border-secundary w-1/5 md:w-1/4"></span>
-          </div>
-        </form>
       </div>
-    </div>
 
-    <!--       Register form part 2
+      <!--       Register form part 2
  -->
-    <div id="register-form-part2"
-      class="hidden-form form-container flex flex-col lg:flex-row justify-center w-full h-144 border-2 border-secundary bg-white rounded-lg shadow-lg overflow-hidden max-w-sm lg:max-w-4xl">
-      <div class="hidden lg:block lg:w-1/2 flex-col bg-no-repeat" style="background-image: url('/src/assets/logo.png')">
-      </div>
-      <div class="w-full p-8 lg:w-1/2 flex justify-center flex-col">
-        <div class="flex justify-start items-center space-x-16">
-          <div class="flex items-start">
-            <svg class="cursor-pointer form-back-arrow transform transition duration-600 ease-in-out hover:scale-110"
-              xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#214e0a">
-              <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
-            </svg>
+      <div
+        id="register-form-part2"
+        class="hidden-form form-container flex flex-col lg:flex-row justify-center w-full h-144 border-2 border-secundary bg-white rounded-lg shadow-lg overflow-hidden max-w-sm lg:max-w-4xl"
+      >
+        <div
+          class="hidden lg:block lg:w-1/2 flex-col bg-no-repeat"
+          style="background-image: url('/src/assets/logo.png')"
+        ></div>
+        <div class="w-full p-8 lg:w-1/2 flex justify-center flex-col">
+          <div class="flex justify-start items-center space-x-16">
+            <div class="flex items-start">
+              <svg
+                class="cursor-pointer form-back-arrow transform transition duration-600 ease-in-out hover:scale-110"
+                xmlns="http://www.w3.org/2000/svg"
+                height="40px"
+                viewBox="0 -960 960 960"
+                width="40px"
+                fill="#214e0a"
+              >
+                <path
+                  d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"
+                />
+              </svg>
+            </div>
+            <div class="text-center flex justify-center">
+              <h2 class="text-4xl text-secundary">Regístrate</h2>
+            </div>
           </div>
-          <div class="text-center flex justify-center">
-            <h2 class="text-4xl text-secundary">Regístrate</h2>
-          </div>
+          <form>
+            <div class="mt-4">
+              <select
+                class="bg-gray-200 text-primary font-bold text-sm focus:outline-primary focus:shadow-outline border border-secundary rounded py-2 px-4 block w-full appearance-none custom-border"
+                type="text"
+                id="document-register"
+                required
+              >
+                <option value="" disabled hidden selected>
+                  Selecciona tu tipo de documento
+                </option>
+                <option value="nit">NIT</option>
+                <option value="Cédula-de-ciudadanía">
+                  Cédula de ciudadanía
+                </option>
+              </select>
+            </div>
+            <div class="mt-4 input-field">
+              <input
+                class="bg-gray-200 text-secundary focus:outline-primary focus:shadow-outline border border-secundary rounded py-2 px-4 block w-full appearance-none"
+                type="text"
+                id="document-number-register"
+                required
+              />
+              <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="document-number-register"
+                >Número de documento</label
+              >
+              <span id="document-error" class="text-sm"></span>
+            </div>
+            <div class="mt-4 input-field">
+              <input
+                class="bg-gray-200 text-secundary focus:outline-primary focus:shadow-outline border border-secundary rounded py-2 px-4 block w-full appearance-none"
+                type="password"
+                id="password-register"
+                required
+              />
+              <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="password-register"
+                >Contraseña</label
+              >
+            </div>
+
+            <div class="mt-4 input-field relative">
+              <input
+                class="bg-gray-200 text-secundary focus:outline-primary focus:shadow-outline border border-secundary rounded py-2 px-4 block w-full appearance-none"
+                type="password"
+                id="confirm-password-register"
+                required
+              />
+              <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="confirm-password-register"
+                >Confirma tu contraseña</label
+              >
+              <span id="pass-error" class="text-sm"></span>
+            </div>
+
+            <div class="mt-8">
+              <button
+                id="register-button"
+                type="submit"
+                class="bg-primary text-white font-bold py-2 px-4 w-full rounded transition duration-600 ease-in-out hover:bg-secundary"
+              >
+                Registrarse
+              </button>
+            </div>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="border-b border-secundary w-1/5 md:w-1/4"></span>
+              <a
+                id="login-link-create-pass"
+                href="/src/view/LoginView.html"
+                class="text-xs font-bold text-primary uppercase transition duration-600 ease-in-out hover:text-secundary"
+                >Inicia sesión</a
+              >
+              <span class="border-b border-secundary w-1/5 md:w-1/4"></span>
+            </div>
+            <div class="transition-colors duration-600 ease-in-out group-hover">
+              <div class="mt-4 flex items-center justify-center cursor-pointer">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#629C44"
+                  class=""
+                >
+                  <path
+                    d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"
+                  />
+                </svg>
+                <a
+                  id="login-link"
+                  href="/public/index.html"
+                  class="text-xs font-bold text-primary uppercase"
+                >
+                  Volver al inicio
+                </a>
+              </div>
+            </div>
+          </form>
         </div>
-        <form>
-          <div class="mt-4">
-            <select
-              class="bg-gray-200 text-primary font-bold text-sm focus:outline-primary focus:shadow-outline border border-secundary rounded py-2 px-4 block w-full appearance-none custom-border"
-              type="text" id="document-register" required>
-              <option value="" disabled hidden selected>
-                Selecciona tu tipo de documento
-              </option>
-              <option value="nit">NIT</option>
-              <option value="Cédula-de-ciudadanía">
-                Cédula de ciudadanía
-              </option>
-            </select>
-          </div>
-          <div class="mt-4 input-field">
-            <input 
-              class="bg-gray-200 text-secundary focus:outline-primary focus:shadow-outline border border-secundary rounded py-2 px-4 block w-full appearance-none"
-              type="text" id="document-number-register" required />
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="document-number-register">Número de
-              documento</label>
-            <span id="document-error" class="text-sm"></span>
-          </div>
-          <div class="mt-4 input-field">
-            <input
-              class="bg-gray-200 text-secundary focus:outline-primary focus:shadow-outline border border-secundary rounded py-2 px-4 block w-full appearance-none"
-              type="password" id="password-register" required />
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="password-register">Contraseña</label>
-          </div>
-
-          <div class="mt-4 input-field relative">
-            <input
-              class="bg-gray-200 text-secundary focus:outline-primary focus:shadow-outline border border-secundary rounded py-2 px-4 block w-full appearance-none"
-              type="password" id="confirm-password-register" required />
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="confirm-password-register">Confirma tu
-              contraseña</label>
-            <span id="pass-error" class="text-sm"></span>
-          </div>
-
-          <div class="mt-8">
-            <button id="register-button" type="submit"
-              class="bg-primary text-white font-bold py-2 px-4 w-full rounded transition duration-600 ease-in-out hover:bg-secundary">
-              Registrarse
-            </button>
-          </div>
-          <div class="mt-4 flex items-center justify-between">
-            <span class="border-b border-secundary w-1/5 md:w-1/4"></span>
-            <a id="login-link-create-pass" href="/src/view/LoginView.html"
-              class="text-xs font-bold text-primary uppercase transition duration-600 ease-in-out hover:text-secundary">Inicia
-              sesión</a>
-            <span class="border-b border-secundary w-1/5 md:w-1/4"></span>
-          </div>
-        </form>
       </div>
     </div>
-
-  </div>
-  <script type="module" src="/src/scripts/RegisterScript.js"></script>
-  <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
-</body>
-
+    <script type="module" src="/src/scripts/RegisterScript.js"></script>
+  </body>
 </html>

@@ -37,12 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
     registerFormPart2.classList.remove("hidden-form");
   });
 
-  LoginLinkCreatePass.addEventListener("click", (e) => {
-    e.preventDefault();
-    registerForm.classList.add("hidden-form");
-    registerFormPart2.classList.add("hidden-form");
-  });
-
   const requiredInputs = document.querySelectorAll(
     "#register-form input[required]"
   );

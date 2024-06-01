@@ -1,12 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./public/*.html", "./src/view/*html", "./src/view/LoginView.html"],
+  content: [
+    "./public/*.html",
+    "./src/view/*.html",
+    "./src/view/LoginView.html",
+  ],
   theme: {
     screens: {
       sm: "480px",
       md: "768px",
-      lg: "976px",
-      xl: "1440px",
+      lg: "1025px",
+      xl: "1520px",
     },
     colors: {
       primary: "#629C44",
@@ -34,9 +38,6 @@ module.exports = {
       "7xl": "5rem",
       custom: "2.5rem",
     },
-    variants: {
-      fill: ["hover", "focus"],
-    },
     extend: {
       spacing: {
         128: "32rem",
@@ -47,4 +48,11 @@ module.exports = {
       },
     },
   },
+  variants: {
+    extend: {
+      fill: ["hover", "focus", "group-hover"],
+      textColor: ["hover", "focus", "group-hover"],
+    },
+  },
+  plugins: [],
 };
