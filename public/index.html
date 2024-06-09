@@ -9,9 +9,7 @@
     <title>Inicio</title>
   </head>
 
-  <body
-    class="box-border m-0 p-0 w-screen h-screen overflow-hidden font-roboto text-secundary text-base"
-  >
+  <body class="box-border m-0 p-0 font-roboto text-secundary text-base">
     <header>
       <div class="p-0 m-0 text-base border-nav">
         <!-- toggle menu -->
@@ -156,6 +154,63 @@
       </div>
     </header>
 
+    <section>
+      <div class="carousel">
+        <div class="carousel-images">
+          <img
+            loading="lazy"
+            src="/src/assets/aguacateHass3.jpg"
+            alt="Imagen 1"
+          />
+          <img
+            loading="lazy"
+            src="/src/assets/aguacateHass1.jpg"
+            alt="Imagen 2"
+          />
+          <img
+            loading="lazy"
+            src="/src/assets/aguacateHass2.jpg"
+            alt="Imagen 3"
+          />
+        </div>
+        <button class="prev" onclick="prevImage()">&#10094;</button>
+        <button class="next" onclick="nextImage()">&#10095;</button>
+      </div>
+    </section>
+
+    <section class="card1">
+      <div class="card" id="producto-card">
+        <h2>Productos</h2>
+        <img
+          class="imgCard1"
+          src="/src/assets/imgCard1.jpg"
+          alt="Producto"
+          class="producto-img"
+        />
+        <p>
+          El aguacate Hass es conocido por su piel rugosa y oscura, que indica
+          madurez y frescura, y su pulpa cremosa y sabrosa, perfecta para
+          disfrutar sola o en una variedad de platos deliciosos.
+        </p>
+        <button class="ver-producto-btn" onclick="verProducto()">
+          Comprar
+        </button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="content">
+        <h2>Nosotros</h2>
+        <p>
+          Somos una empresa apasionada en comercializar aguacates Hass de la más
+          alta calidad. Nuestro compromiso es ofrecerte productos frescos y
+          deliciosos, cultivados con cuidado para garantizar su sabor y
+          nutrición. Descubre la excelencia en cada bocado con nosotros.
+        </p>
+      </div>
+    </section>
+
+    <script src="/src/scripts/Carrousel.js"></script>
     <script type="module" src="/src/scripts/NavBar.js"></script>
   </body>
 </html>
