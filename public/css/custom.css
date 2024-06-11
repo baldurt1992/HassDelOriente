@@ -295,6 +295,11 @@ h2 {
 
 p {
   margin: 0 0 20px 0;
+  color: black;
+}
+
+.titleCard {
+  margin: 0 0 20px 0;
   color: #214e0a;
 }
 
@@ -312,8 +317,8 @@ p {
 }
 
 .view-product-btn {
-  background-color: #629c44;
-  color: black;
+  background-color: #214e0a;
+  color: #fff;
   border: none;
   padding: 10px 20px;
   margin-top: 10px;
@@ -322,7 +327,7 @@ p {
 }
 
 .view-product-btn:hover {
-  background-color: #ffffff;
+  background-color: #629c44;
 }
 
 .section {
@@ -362,9 +367,10 @@ p {
 }
 
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #629c44;
+  color: black;
   padding: 20px 0;
+  margin-top: 30px;
 }
 
 .footer-container {
@@ -376,11 +382,12 @@ footer {
 }
 
 .column {
-  flex: 1;
+  flex: 3;
 }
 
 .logo img {
-  width: 100px; /* Ajusta el tamaño del logo según tu preferencia */
+  width: 24vh;
+  margin-top: 20px;
 }
 
 .contact-info {
@@ -388,10 +395,19 @@ footer {
 }
 
 .social-icons {
-  text-align: right;
+  margin-left: 20px;
 }
 
 .social-icons img {
-  width: 30px; /* Ajusta el tamaño de los iconos de redes sociales según tu preferencia */
-  margin-left: 10px; /* Ajusta el espaciado entre los iconos según tu preferencia */
+  width: 30px;
+  margin-left: 10px;
+}
+
+.footerUs {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.social-icon {
+  margin-top: 10px;
 }
