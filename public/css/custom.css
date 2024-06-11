@@ -258,18 +258,21 @@ button.next {
   align-items: center;
   height: 120vh;
   margin: 0;
+  margin-top: -80px;
 }
 
 .card {
-  background-color: #8ac96b;
+  background-color: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #28a745;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  border-radius: 5px;
   text-align: center;
   max-width: 380px;
 }
 
-.producto-img {
+.product-img {
   max-width: 100%;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -286,17 +289,30 @@ button.next {
 h2 {
   margin-top: 0;
   margin-bottom: 10px;
-  color: black;
+  color: #214e0a;
   font-size: 2em;
 }
 
 p {
   margin: 0 0 20px 0;
-  color: black;
+  color: #214e0a;
 }
 
-.ver-producto-btn {
-  background-color: #ffffff;
+.textUs {
+  color: black;
+  margin-top: 20px;
+}
+
+.titleProducts {
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10vh;
+  font-size: 50px;
+}
+
+.view-product-btn {
+  background-color: #629c44;
   color: black;
   border: none;
   padding: 10px 20px;
@@ -305,7 +321,7 @@ p {
   cursor: pointer;
 }
 
-.ver-producto-btn:hover {
+.view-product-btn:hover {
   background-color: #ffffff;
 }
 
@@ -318,7 +334,7 @@ p {
 
 .content {
   max-width: 800px;
-  background-color: white;
+  background-color: #ffffff;
   padding: 20px;
   text-align: center;
 }
@@ -327,4 +343,55 @@ p {
   .content {
     max-width: 90%;
   }
+}
+
+.section {
+  margin-top: -40px;
+  padding-top: 0;
+}
+
+.aboutUs {
+  padding-top: 0;
+  color: black;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.content p {
+  margin-top: 0;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.column {
+  flex: 1;
+}
+
+.logo img {
+  width: 100px; /* Ajusta el tamaño del logo según tu preferencia */
+}
+
+.contact-info {
+  text-align: left;
+}
+
+.social-icons {
+  text-align: right;
+}
+
+.social-icons img {
+  width: 30px; /* Ajusta el tamaño de los iconos de redes sociales según tu preferencia */
+  margin-left: 10px; /* Ajusta el espaciado entre los iconos según tu preferencia */
 }

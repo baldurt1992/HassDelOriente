@@ -89,14 +89,14 @@
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#product-card"
                   class="border-0 lg:border-l-2 nav-items lg:border-r-2 px-4 link-items border-transparent border-solid transition-colors duration-300 ease-in-out hover:text-secundary"
                   >Productos</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#Us"
                   class="border-0 lg:border-l-2 nav-items lg:border-r-2 px-4 link-items border-transparent border-solid transition-colors duration-300 ease-in-out hover:text-secundary"
                   0
                   >Nosotros</a
@@ -178,37 +178,62 @@
       </div>
     </section>
 
+    <div>
+      <h2 class="titleProducts" id="product-card">Productos</h2>
+    </div>
+
     <section class="card1">
-      <div class="card" id="producto-card">
-        <h2>Productos</h2>
+      <div class="card">
         <img
           class="imgCard1"
           src="/src/assets/imgCard1.jpg"
           alt="Producto"
-          class="producto-img"
+          class="product-img"
         />
         <p>
           El aguacate Hass es conocido por su piel rugosa y oscura, que indica
           madurez y frescura, y su pulpa cremosa y sabrosa, perfecta para
           disfrutar sola o en una variedad de platos deliciosos.
         </p>
-        <button class="ver-producto-btn" onclick="verProducto()">
+        <button class="view-product-btn" onclick="verProducto()">
           Comprar
         </button>
       </div>
     </section>
 
     <section class="section">
-      <div class="content">
-        <h2>Nosotros</h2>
-        <p>
-          Somos una empresa apasionada en comercializar aguacates Hass de la más
+      <div class="content" id="Us">
+        <h2 class="aboutUs">Nosotros</h2>
+        <p class="textUs">
+          Somos una empresa apasionada en comercializar Aguacate Hass de la más
           alta calidad. Nuestro compromiso es ofrecerte productos frescos y
           deliciosos, cultivados con cuidado para garantizar su sabor y
           nutrición. Descubre la excelencia en cada bocado con nosotros.
         </p>
       </div>
     </section>
+
+    <footer>
+      <div class="footer-container">
+        <div class="column">
+          <div class="logo">
+            <img src="logo_empresa.png" alt="Logo de la empresa" />
+          </div>
+          <div class="contact-info">
+            <p>Nombre de la Empresa</p>
+            <p>Dirección: Calle 123, Ciudad, País</p>
+            <p>Correo electrónico: info@empresa.com</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="social-icons">
+            <a href="#"><img src="facebook.png" alt="Facebook" /></a>
+            <a href="#"><img src="twitter.png" alt="Twitter" /></a>
+            <a href="#"><img src="instagram.png" alt="Instagram" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script src="/src/scripts/Carrousel.js"></script>
     <script type="module" src="/src/scripts/NavBar.js"></script>
